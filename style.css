@@ -3,15 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poiret One', cursive;
-    background: conic-gradient(
-            at 125% 50%,
-            #b78cf7,
-            #ff7c94,
-            #ffcf0d,
-            #ff7c94,
-            #b78cf7
-        )
-        no-repeat;
+    background-image: url(img/bg.jpg);
 }
 
 .container {
@@ -19,12 +11,14 @@ body {
     margin: auto;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
 }
 
 .digitalClock {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.701);
     width: fit-content;
     border-radius: 2px;
     color: #fff;
@@ -37,8 +31,61 @@ body {
     font-size: 5rem;
 }
 
+.container-input {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.767);
+    border-radius: 5px;
+    padding: 0 15px;
+    color: black;
+    justify-content: space-around;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.inputs input {
+    width: 30px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.626);
+    color: black;
+}
+
+.counter {
+    font-size: 5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.counter-title {
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: -1px;
+}
+
+#next {
+    padding-left: 10px;
+    transition: 0.6s linear;
+}
+
+#next:hover {
+    
+    color: #fff;
+}
+
 @media (max-width: 768px) {
-    #bar1,
     #bar2 {
         display: none;
     }
@@ -47,13 +94,19 @@ body {
         width: 100%;
     }
 
-    .digitalClock h1 {
+    .digitalClock .block {
         display: block;
     }
 }
 
 @media (max-width: 480px) {
     .digitalClock h1 {
-        font-size: 4rem;
+        font-size: 2rem;
+    }
+
+    
+
+    .container-input {
+        font-size: 0.7rem;
     }
 }

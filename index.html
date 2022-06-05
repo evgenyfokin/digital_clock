@@ -4,19 +4,34 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        />
         <link rel="stylesheet" href="style.css" />
-        <title>Digital clock</title>
+        <title>Cucumber counter</title>
     </head>
     <body>
-
         <div class="container">
             <div class="digitalClock">
-                <h1 id="day">MON</h1>
+                <h1 id="day" class="block">MON</h1>
                 <h1 id="hour">03</h1>
                 <h1 id="bar1">:</h1>
                 <h1 id="minute">20</h1>
                 <h1 id="bar2">:</h1>
-                <h1 id="ampm">PM</h1>
+                <h1 id="ampm" class="block">PM</h1>
+
+                <div class="container-input">
+                    <p>How long is he/she late?</p>
+                    <div class="inputs">
+                        <input id="input1" type="number" maxlength="2" placeholder="h"/>
+                        <p>:</p>
+                        <input id="input2" type="number" maxlength="2" placeholder="m"/>
+                        <i onclick="countCucumbers()" id="next" class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+                <div id="count" class="counter">0</div>
+                <p class="counter-title">KG. CUCUBERS</p>
             </div>
         </div>
         <script src="script.js"></script>

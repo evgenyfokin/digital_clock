@@ -24,4 +24,13 @@ function calculateTime() {
     setTimeout(calculateTime, 200);
 }
 
+let hours = document.getElementById('input1');
+let minutes = document.getElementById('input2')
+
+function countCucumbers () {
+    document.getElementById('count').innerHTML = ((hours.value * 60 + +minutes.value)/20).toFixed(2);
+}
+
 calculateTime();
+
+
